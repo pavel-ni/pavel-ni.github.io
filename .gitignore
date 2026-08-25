@@ -1,0 +1,7 @@
+# Ignore common files for web projects
+.DS_Store
+*.log
+# If using any build tools or compilers
+node_modules/
+dist/
+.env

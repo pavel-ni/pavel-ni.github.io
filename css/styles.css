@@ -1,0 +1,100 @@
+:root {
+    --primary-color: #333;
+    --bg-color: #ffffff;
+    --text-color: #444;
+    --accent-color: #007bff;
+    --border-color: #e0e0e0;
+    --section-bg: #f9f9f9;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    padding: 4rem 2rem;
+    background-color: var(--section-bg);
+    border-bottom: 1px solid var(--border-color);
+    text-align: center;
+}
+
+h1 { margin: 0; font-size: 2.5rem; color: var(--primary-color); }
+h2 { color: var(--primary-color); border-bottom: 2px solid var(--accent-color); padding-bottom: 0.5rem; margin-top: 2rem; }
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.contact-info {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #777;
+}
+
+.address {
+    margin-top: 10px;
+    font-size: 0.8rem;
+    color: #999;
+}
+
+.experience-item, .education-item {
+    margin-bottom: 1.5rem;
+}
+
+.item-title {
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 0.2rem;
+}
+
+.item-meta {
+    font-size: 0.9rem;
+    color: #000;
+    margin-bottom: 0.5rem;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 10px;
+}
+
+.skill-tag {
+    background: var(--section-bg);
+    padding: 5px 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.img-profile {
+    max-width: 10%;
+    height: auto;
+    border-radius: 50%;
+}
+
+.img-project {
+    max-width: 50%;
+    height: auto;
+    margin-top: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.8rem;
+    color: #aaa;
+    border-top: 1px solid var(--border-color);
+}
+
+@media (max-width: 600px) {
+    h1 { font-size: 2rem; }
+}
