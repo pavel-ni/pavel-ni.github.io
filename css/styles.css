@@ -75,10 +75,79 @@ h2 { color: var(--primary-color); border-bottom: 2px solid var(--accent-color); 
     font-size: 0.9rem;
 }
 
-.img-profile {
-    max-width: 10%;
-    height: auto;
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.profile-carousel {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    flex-shrink: 0;
+    overflow: hidden;
     border-radius: 50%;
+}
+
+.profile-carousel img {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+
+    opacity: 0;
+    animation: profileCarousel 12s infinite;
+}
+
+/* First image */
+.profile-carousel img:nth-child(1) {
+    animation-delay: 0s;
+}
+
+/* Second image */
+.profile-carousel img:nth-child(2) {
+    animation-delay: 3s;
+}
+
+/* Third image */
+.profile-carousel img:nth-child(3) {
+    animation-delay: 6s;
+}
+
+/* Fourth image */
+.profile-carousel img:nth-child(4) {
+    animation-delay: 9s;
+}
+
+@keyframes profileCarousel {
+
+    /* visible */
+    0% {
+        opacity: 0;
+    }
+
+    5% {
+        opacity: 1;
+    }
+
+    28% {
+        opacity: 1;
+    }
+
+    /* fade out */
+    33% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
 }
 
 .img-project {
@@ -86,6 +155,7 @@ h2 { color: var(--primary-color); border-bottom: 2px solid var(--accent-color); 
     height: auto;
     margin-top: 10px;
 }
+
 
 footer {
     text-align: center;
@@ -96,5 +166,15 @@ footer {
 }
 
 @media (max-width: 600px) {
-    h1 { font-size: 2rem; }
+    h1 {
+        font-size: 2rem;
+    }
+
+    .header-content {
+        flex-direction: column;
+    }
+
+    .header-text {
+        text-align: center;
+    }
 }
